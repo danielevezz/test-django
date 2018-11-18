@@ -9,7 +9,7 @@
                 {% if event.new %}
                     <span class="badge badge-primary">New</span>
                 {% endif %}
-                <h6>{{ event.createdAt }}</h6>
+                <h6><b>{{ event.createdAt|time:"H:i" }}</b></h6>
                 <p> {{ event.description }}</p>
             </li>
         {% endfor %}

@@ -3,7 +3,7 @@
 {% block content %}
 
     <h1> {{ event.title }} </h1>
-    <h5> {{ event.createdAt }} </h5>
+    <h5><b> {{ event.createdAt|time:"H:i" }}</b></h5>
     <p> {{ event.description }} </p>
 
     <a href="/website" class="btn btn-primary">Torna indietro</a>
