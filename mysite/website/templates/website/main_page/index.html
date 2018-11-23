@@ -1,0 +1,17 @@
+{% extends "website/main.html" %}
+
+{% block content %}
+    <div class="container-fluid p-lg-5">
+        {% include "website/main_page/component/top_articles.html" %}
+    </div>
+    <div class="container">
+        {% include "website/main_page/component/patrocini.html" %}
+        <div class="row">
+            {% include "website/main_page/component/progetti.html" %}
+            {% include "website/main_page/component/sidebar.html" %}
+        </div>
+        {% block eventi %}{% endblock %}
+        {% block team %}{% endblock %}
+        <div style="height: 100px; background-color: aquamarine"></div>
+    </div>
+{% endblock %}

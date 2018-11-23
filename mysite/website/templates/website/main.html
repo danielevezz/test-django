@@ -11,15 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
     {% include "website/component/navbar.html" %}
     {% block content %}{% endblock %}
+    {% include "website/component/footer.html" %}
 
-    <div class="row">
-        {% include "website/component/card.html" %}
-    </div>
-</div>
-{% include "website/component/footer.html" %}
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -3,10 +3,10 @@ from django.shortcuts import render
 from .models import Event
 
 
-def program(request):
+def index(request):
     event_list = Event.objects.all()
     context = {"event_list": event_list}
-    return render(request, 'website/program.html', context)
+    return render(request, "website/main_page/index.html", context)
 
 
 def detail(request, event_id):
