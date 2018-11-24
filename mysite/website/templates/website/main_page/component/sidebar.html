@@ -1,9 +1,10 @@
-<div class="col-md-4">
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ul>
+<div class="col-md-4 position-sticky">
+    <h4>Ultime news.</h4>
+    <ol>
+        {% for link in links %}
+            <li class="mt-3"><h6>{{ link.title }}</h6></li>
+            <h6 class="text-muted">{{ link.date }}</h6>
+        {% endfor %}
+    </ol>
 </div>
+

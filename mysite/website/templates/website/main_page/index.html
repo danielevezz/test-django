@@ -2,16 +2,18 @@
 
 {% block content %}
     <div class="container-fluid p-lg-5">
-        {% include "website/main_page/component/top_articles.html" %}
+        {% include "website/main_page/component/top_articles.html" with articles=articles %}
     </div>
     <div class="container">
         {% include "website/main_page/component/patrocini.html" %}
-        <div class="row">
-            {% include "website/main_page/component/progetti.html" %}
-            {% include "website/main_page/component/sidebar.html" %}
+        <div class="row mt-5">
+            {% include "website/main_page/component/progetti.html" with projects=projects %}
+            {% include "website/main_page/component/sidebar.html" with links=top_news %}
         </div>
-        {% block eventi %}{% endblock %}
-        {% block team %}{% endblock %}
+        <div class="row mt-5">
+            {% include "website/main_page/component/eventi.html" with events=events %}
+        </div>
+        {% include "website/main_page/component/team.html" with team=team %}
         <div style="height: 100px; background-color: aquamarine"></div>
     </div>
 {% endblock %}
